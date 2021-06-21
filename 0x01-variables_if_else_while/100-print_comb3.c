@@ -16,7 +16,6 @@ for (x = '0'; x <= '9'; x++)
 {
 putchar(i);
 putchar(x);
-      
 if (i == '9' && x == '9')
 {
 continue;
