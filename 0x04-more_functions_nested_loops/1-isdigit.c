@@ -4,7 +4,7 @@
  * _isdigit - check the code for Holberton School students.
  *
  * Return: Always 0.
- *@c: se
+ *@c: ssssse
  *
 */
 
