@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * _isdigit - check the code for Holberton School students.
  *
