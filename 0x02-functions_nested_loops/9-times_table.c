@@ -1,4 +1,4 @@
-#include "holberton.h"
+0;10;1c#include "holberton.h"
 #include <stdio.h>
 
 
@@ -11,7 +11,7 @@
 void times_table(void)
 {
 
-int i, j,num = 9;
+int i, j, num = 9;
 for (i = 0; i < num + 1; i++)
 {
 for (j = 0; j < num + 1; j++)
