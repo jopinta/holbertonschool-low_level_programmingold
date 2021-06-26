@@ -4,7 +4,8 @@
  * print_square - check the code for Holberton School students.
  *
  * Return: Always 0.
- */
+ *@size: no se olviden  
+*/
 
 void print_square(int size)
 {
