@@ -6,27 +6,22 @@
  *
  * Return: Always 0.
  *@src: sorce string
- *@dest: destination of lov 
+ *@dest: destination of lov
 */
 
 
 char *_strcat(char *dest, char *src)
 {
 
-  int len, j;
-  
+int len, j = 0;
 
-  len = 0;
-  while (src[len] != '\0')
-    {
-      ++len;
-    }
-  for (j = 0; dest[j] != '\0'; j++)
-    {
-      dest = src;
-      
-    }
-  dest[j] = '\0';
-   
-  return (dest);
+
+len = 0;
+while (dest[len++])
+j++;
+
+for (len = 0; src[len]; len++)
+dest[j++] = src[len];
+
+return (dest);
 }
