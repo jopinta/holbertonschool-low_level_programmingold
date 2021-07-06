@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  *@s: sterre
- *@to: ptr 
+ *@to: ptr
 */
 
 void set_string(char **s, char *to)
