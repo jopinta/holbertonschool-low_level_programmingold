@@ -5,7 +5,7 @@
  * _strstr - check the code for Holberton School students.
  *
  * Return: Always 0.
- * 
+ *
  *@haystack:novaahaver
  *@needle: need l
  */
