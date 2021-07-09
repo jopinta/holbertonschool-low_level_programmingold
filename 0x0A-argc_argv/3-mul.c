@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
 {
 	int val;
 
-if (argc != 3)
+	if (argc != 3)
 {
-printf("Error\n");
-return (1);
+	printf("Error\n");
+	return (1);
 }
 
 
-val = atoi(argv[1]) * atoi(argv[2]);
-printf("%d\n", val);
-return (1);
+	val = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d\n", val);
+	return (1);
 }
