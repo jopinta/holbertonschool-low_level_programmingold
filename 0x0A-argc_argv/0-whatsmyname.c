@@ -1,9 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 
-/** main - funtion entry point
+/**
+ *main - funtion entry point
  *
- *return - always 0
+ * Return: always 0
  *@argc: cantidad
  *@argv: values
  */
