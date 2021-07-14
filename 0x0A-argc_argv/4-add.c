@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int suma;
 	int res = 0;
 
-		for (suma = 1; suma < argc -1; suma++)
+		for (suma = 1; suma < argc; suma++)
 		{
 			if (atoi(argv[suma]) == 0 && *argv[suma] == 48)
 			{
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				res = atoi(res + argv[suma]);
+				res += atoi(argv[suma]);
 			}
 		}
 		printf("%d\n", res);
