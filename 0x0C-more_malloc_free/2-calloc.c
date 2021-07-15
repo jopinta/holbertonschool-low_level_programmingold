@@ -19,11 +19,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == '\0' || size == '\0')
 		return (NULL);
-
 	lolita = malloc(nmemb * size);
-		if (!lolita)
-			return (NULL);
-			for (i = 0; i < (nmemb * size); i++)
-				     lolita[i] = 0;
+	if (!lolita)
+		return (NULL);
+	for (i = 0; i < (nmemb * size); i++)
+		lolita[i] = 0;
 	return (lolita);
 }
