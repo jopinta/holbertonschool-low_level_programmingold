@@ -15,14 +15,17 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 
 	char *lolita;
+	unsigned int i;
 
 	if (nmemb == '\0' && size == '\0')
 		return (NULL);
 
-	lolita = malloc(sizeof(nmemb + size));
+	lolita = malloc(sizeof(nmemb * size));
 		if (!lolita)
 		{
 			return (NULL);
+			for (i = 0; i < (nmemb * size); i++)
+				     lolita[i] = 0;
 		}
 	return (lolita);
 }
