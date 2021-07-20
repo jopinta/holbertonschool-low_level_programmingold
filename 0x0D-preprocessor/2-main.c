@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - entry point tothe programm
  *
  *@void: does not recieve parameteres
  *
- * Return : always 0
+ * Return: always 0
  *
  */
 
