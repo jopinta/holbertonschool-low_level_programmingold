@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "function_pointers.h"
-
+#include <stdlib.h>
 /**
  * int_index - check if a number is equal to 98
  *@array: element to print in cmp fun
