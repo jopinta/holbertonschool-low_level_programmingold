@@ -5,7 +5,7 @@
 /**
  *print_list - printea todo
  *
- *@h: lista
+ *@h: pointer lista
  *
  *
  *Return: contador
@@ -25,7 +25,7 @@ if (h->str == NULL)
 printf("[0] (nil)\n");
 }
 else
-printf("[%d %s,\n", h->len, h->str);
+printf("[%d] %s,\n", h->len, h->str);
 i++;
 h = h->next;
 }
