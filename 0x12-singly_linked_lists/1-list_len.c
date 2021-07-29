@@ -4,7 +4,7 @@
 /**
  *list_len - largo de l lista
  *
- *@h: lista+
+ *@h: lista+ ntera
  *
  *Return: number of elements
  */
