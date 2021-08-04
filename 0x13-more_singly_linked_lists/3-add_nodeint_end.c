@@ -3,7 +3,7 @@
 /**
  *add_nodeint_end - add node at the end
  *@head: struct with th elinked list.
- *@int: int to copy
+ *@n: int to copy
  *Return: address of hte new element.
  */
 
@@ -21,10 +21,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		nodo->next = NULL;
 
 		if (*head == NULL)
-			{
-				*head = nodo;
-				return (nodo);
-			}
+		{
+			*head = nodo;
+			return (nodo);
+		}
 		nodoend = *head;
 
 		while (nodoend->next != NULL)
