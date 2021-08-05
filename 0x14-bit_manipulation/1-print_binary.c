@@ -2,7 +2,7 @@
 
 /**
  *print_binary -  prints the binary representation of a number.
- *@n: unsigned long int
+ *@n: string unsigned long int
  *
  *Returns: void
  *
@@ -10,12 +10,12 @@
 
 void print_binary(unsigned long int n)
 {
-	int i;
-int j;
-	int x;
+	int i = 0;
+int j = 0;
+	int x = 0;
 
 
-if (n == '0')
+if (n == 0)
 {
 	_putchar('0');
 }
