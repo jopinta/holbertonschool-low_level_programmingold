@@ -8,11 +8,11 @@
 *Return: 1 if it worked, or -1 if an error occurred
 */
 
-nt set_bit(unsigned long int *n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
 
 
-	unsigned long int lenght = sizeof((*n)) * 8;
+	unsigned long int length = sizeof((*n)) * 8;
 unsigned long int i = 1;
 
 if (index > length)
