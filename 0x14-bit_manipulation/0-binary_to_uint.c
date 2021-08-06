@@ -13,19 +13,23 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0;
-	unsigned int converted;
+	int i;
+	unsigned int n = 0, m = 1;
 
-	if (!b)
-		return (0);
-	while (b[i])
+	if (b)
+	{
+	for (i = 0; b[i] != '\0'; i++)
+		;
+	for (i -= 1; i >= 0; i--)
 	{
 		if  (b[i] != '0' && b[i] != '1')
 			return (0);
-	converted <<= 1;
+
 		if (b[i] == '1')
-			converted += 1;
-		i++;
+			n += m;
+		m *= 2;
 	}
-	return (converted);
+	return (n);
+}
+	return (0);
 }
