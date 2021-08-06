@@ -18,7 +18,6 @@ int b = 0;
 if (n == 0)
 {
 	_putchar('0');
-	return;
 }
 for (i = 63; i >= 0; i--)
 {
