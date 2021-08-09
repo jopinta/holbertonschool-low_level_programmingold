@@ -38,12 +38,12 @@ ret = read(filedes, buff, letters);
 {
 if (ret == -1)
         {
-                return (-1);
+                return (0);
         }
 ret = write(STDOUT_FILENO, buff, letters);
 	if (ret == -1)
 	{
-		return (-1);
+		return (0);
 	}
 }
 free(buff);
