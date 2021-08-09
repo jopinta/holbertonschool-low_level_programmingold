@@ -1,11 +1,4 @@
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <stddef.h>
 #include "main.h"
-#include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 
 
@@ -28,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	fd = open(filename, O_CREAT | O_RDWR, 0600);
+	fd = open(filename, O_CREAT | O_RDWR | 0_TRUNC, 0600);
 	if  (fd == -1)
 		return (-1);
 
