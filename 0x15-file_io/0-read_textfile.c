@@ -16,7 +16,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int filedes = 0;
-	ssize_t imp = 0;
+
 	ssize_t ret = 0;
 	char *buff = malloc(sizeof(char) * letters);
 
@@ -34,15 +34,17 @@ if (filedes == -1)
 	return (0);
 }
 
-imp = read(filedes, buff, letters);
-if (imp != -1)
+ret = read(filedes, buff, letters);
 {
-	ret = write(STDOUT_FILENO, buff, letters);
+if (ret == -1)
+        {
+                return (-1);
+        }
+ret = write(STDOUT_FILENO, buff, letters);
 	if (ret == -1)
 	{
 		return (-1);
 	}
-	ret = imp;
 }
 free(buff);
 close(filedes);
