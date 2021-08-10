@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <fcntl.h>
 /**
  *main - Entry point
  *@argc: name of the program
