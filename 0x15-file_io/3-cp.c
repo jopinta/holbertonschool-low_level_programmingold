@@ -9,7 +9,7 @@
 
 int main(int argc, char **argv)
 {
-	int file_from, file_to;
+	int file_from, file_to, j, i;
 	char buff[1024];
 	int cont = 0;
 
@@ -42,7 +42,12 @@ int main(int argc, char **argv)
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
-		close(file_from);
-		close(file_to);
+		i = close(file_from);
+		j = close(file_to);
+		if (j == -1 || i == -1)
+		{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
+		exit(100);
+		}
 		return (0);
 }
