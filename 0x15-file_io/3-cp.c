@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 }
 
@@ -39,7 +39,7 @@ if (file_to == -1)
 	i = close(file_from);
 		if (i == -1)
 		{
-			dprintf(2, "Error: Can't close fd %i", file_from);
+dprintf(STDERR_FILENO, "Error: Can't close fd %i", file_from);
 			exit(100);
 		}
 		exit(98);
@@ -49,7 +49,7 @@ if (file_to == -1)
 		j = write(file_to, buff, cont);
 		if (j == -1)
 		{
-			dprintf(2, "Error: Can't write to %s", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 			exit(99);
 		}
 	}
