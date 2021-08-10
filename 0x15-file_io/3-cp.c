@@ -1,5 +1,5 @@
 #include "main.h"
-#include <fcntl.h>
+
 /**
  *main - Entry point
  *@argc: name of the program
@@ -46,7 +46,7 @@ if (to == -1)
 }
 	while ((cont = read(from, buff, sizeof(buff))) != 0)
 	{
-		j = write(to, buff, from);
+		j = write(to, buff, cont);
 		if (j == -1)
 		{
 			dprintf(2, "Error: Can't write to %s", argv[2]);
