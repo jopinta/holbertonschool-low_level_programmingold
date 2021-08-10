@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *main - Entry point
  *@argc: name of the program
@@ -10,7 +9,6 @@
 
 int main(int argc, char **argv)
 {
-
 	int file_from, file_to, i, j;
 	char buff[1024];
 	ssize_t cont;
@@ -30,12 +28,12 @@ int main(int argc, char **argv)
 		if (file_to == -1)
 		{
 			i = close(file_from);
-	if (i == -1)
-	{
-		dprintf(2, "Error: Can't close fd %i", file_from);
-		exit(100);
-	}
-	exit(98);
+			if (i == -1)
+			{
+				dprintf(2, "Error: Can't close fd %i", file_from);
+				exit(100);
+			}
+			exit(98);
 		}
 		while ((cont = read(file_from, buff, sizeof(buff))) != 0)
 		{
@@ -45,6 +43,7 @@ int main(int argc, char **argv)
 			dprintf(2, "Error: Can't write to %s", argv[2]);
 			exit(99);
 		}
-	}
+		j = close(file_to);
+			}
 	return (0);
 }
