@@ -9,9 +9,9 @@
 
 int main(int argc, char **argv)
 {
-	int file_from, file_to, i, j;
+	int file_from, file_to;
 	char buff[1024];
-	ssize_t cont;
+	int cont = 0;
 
 		if (argc != 3)
 		{
@@ -27,22 +27,22 @@ int main(int argc, char **argv)
 		file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 		if (file_to == -1)
 		{
-			i = close(file_from);
-			if (i == -1)
-			{
-				dprintf(2, "Error: Can't close fd %i", file_from);
-				exit(100);
-			}
-			exit(98);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+				exit(99);
 		}
-		while ((cont = read(file_from, buff, sizeof(buff))) != 0)
-		{
-			j = write(file_to, buff, cont);
-		if (j == -1)
-		{
+		while ((cont = read(file_from, buff, sizeof(buff))) > 0)
+			if (write(file_to, buff, cont) != cont)
+			{
 			dprintf(2, "Error: Can't write to %s", argv[2]);
 			exit(99);
-		}
 			}
-	return (0);
+
+		if (cont == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		close(file_from);
+		close(file_to);
+		return (0);
 }
