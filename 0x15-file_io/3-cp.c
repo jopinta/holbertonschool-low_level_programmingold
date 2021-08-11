@@ -3,10 +3,8 @@
  *main - Entry point
  *@argc: name of the program
  *@argv: argument vector
- *
  *Return: bytes read
  */
-
 int main(int argc, char **argv)
 {
 	int file_from, file_to, j, i;
@@ -36,7 +34,6 @@ int main(int argc, char **argv)
 			dprintf(2, "Error: Can't write to %s", argv[2]);
 			exit(99);
 			}
-
 		if (cont == -1)
 		{
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
