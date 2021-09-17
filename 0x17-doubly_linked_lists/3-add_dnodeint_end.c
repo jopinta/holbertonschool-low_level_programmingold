@@ -15,21 +15,14 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	if (head == NULL)
 		return (NULL);
-/**
- *chequeando si existe
- *
- *creando nodo reservando memoria y asignando el valor
- */
+
 	nuevo_nodo = malloc(sizeof(dlistint_t));
 	if (nuevo_nodo == NULL)
 		return (NULL);
 	nuevo_nodo->n = n;
-        nuevo_nodo->next = NULL;
+nuevo_nodo->next = NULL;
 
-/**
- *el nodo temporal es al que se le asigna el puntero primer
- *luego se apunta head al nodoy que al quedar ultimo apunte a null
- */
+
 	nodo_tmp = *head;
 
 	if (*head == NULL)
@@ -38,10 +31,6 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		nuevo_nodo->prev = NULL;
 		return (nuevo_nodo);
 	}
-/**
- *
- *
- */
 
 	while (nodo_tmp->next != NULL)
 	{
