@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -6,9 +6,6 @@
  *
  * Return: Always EXIT_SUCCESS.
  */
-
-*EXIT_SUCCESS = NULL;
-
 int main(void)
 {
     printf("%d\n", _strlen("My Dyn Lib"));
