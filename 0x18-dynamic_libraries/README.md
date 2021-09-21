@@ -27,3 +27,7 @@ ldd invokes the standard dynamic linker (see
        dependencies.  For each dependency, ldd displays the location of
        the matching object and the (hexadecimal) address at which it is
        loaded.
+
+ldconfig is a utility that indexes shared object names to simplify loading on sh
+ared object libraries by executables. It scans standard directories and those fo
+und in the ld. so. conf configuration file and stores its index in ld.
